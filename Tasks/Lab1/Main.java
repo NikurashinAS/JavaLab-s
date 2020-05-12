@@ -8,8 +8,16 @@ public class Main
         Scanner in = new Scanner(System.in);
         System.out.println("Введите диапазон");
         System.out.print("num1 = ");
+        if (!in.hasNextInt())
+        {
+            throw new NullPointerException("введите целое число");
+        }
         int num1 = in.nextInt();
         System.out.print("num2 = ");
+        if (!in.hasNextInt())
+        {
+            throw new NullPointerException("введите целое число");
+        }
         int num2 = in.nextInt();
         if ((num1 > num2) | (num1 < 0) | (num2 < 0))
         {
